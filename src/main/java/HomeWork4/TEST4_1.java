@@ -47,6 +47,9 @@ public class TEST4_1 {
                 if (!emptyBlock(wordsList)) {
 
                     printAllNotebook(wordsList);
+                }else{
+                    System.out.println("В списке пока ничего нет, сначала заполните его:");
+                    continue;
                 }
                 //...и возвращаемся в начало цикла, где заново запрашивается ввод строки
                 continue;
@@ -56,6 +59,9 @@ public class TEST4_1 {
                 if (!emptyBlock(wordsList)) {
                     wordsList.removeFirst();
                     System.out.println("Последняя запись удалена");
+                }else{
+                    System.out.println("В списке пока ничего нет, сначала заполните его:");
+                    continue;
                 }
                 continue;
             }
@@ -73,9 +79,8 @@ public class TEST4_1 {
     }
 
     private static boolean emptyBlock(LinkedList<String> wordsList) {
-
         //нет строк в блокноте
-        System.out.println("В списке пока ничего нет, сначала заполните его:");
         return wordsList.size() == 0;
     }
+
 }
